@@ -1,0 +1,813 @@
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    /*
+
+    //Imprimir texto
+
+  cout << "Hello World! \n" <<endl;
+  cout << "I am learning C++";
+  return 0;
+
+  //Variables
+
+  int myNum;
+  myNum = 15;
+  cout << myNum;
+  int myNum2 = 5;               
+  double myFloatNum = 5.99;    
+  char myLetter = 'D';         
+  string myText = "Hello";    
+  bool myBoolean = true;  
+  int myAge = 35;
+  cout << "I am " << myAge << " years old.";
+  int x = 5;
+  int y = 6;
+  int sum = x + y;
+  cout << sum;
+  int x2 = 5, y2 = 6, z2 = 50;
+  cout << x2 + y2 + z2;
+  int minutesPerHour = 60;
+  int m = 60;
+  const int minutesPerHour2 = 60;
+  const float PI = 3.14;
+  int x3;
+
+  //Entrada de usuario
+
+cout << "Type a number: "; // Type a number and press enter
+cin >> x3; // Get user input from the keyboard
+cout << "Your number is: " << x;
+
+//Tipos de datos
+
+int myNum5 = 5;               
+float myFloatNum = 5.99;     
+double myDoubleNum = 9.98;   
+char myLetter = 'D';         
+bool myBoolean = true;     
+string myText = "Hello";     
+cout << myNum5;
+cout << myFloatNum;
+cout << myLetter;
+cout << myBoolean;
+cout << myText;
+bool isCodingFun = true;
+bool isFishTasty = false;
+cout << isCodingFun; 
+cout << isFishTasty; 
+char myGrade = 'B';
+cout << myGrade;
+char a = 65, b = 66, c = 67;
+cout << a;
+cout << b;
+cout << c;
+int x4 = 100 + 50;
+int sum1 = 100 + 50;        
+int sum2 = sum1 + 250;     
+int sum3 = sum2 + sum2;
+int x5 = 10;
+x5 += 5;
+int x6 = 5;
+int y6 = 3;
+cout << (x6 > y6);
+
+//Strings
+
+string greeting = "Hello";
+cout << greeting;
+string firstName = "John ";
+string lastName = "Doe";
+string fullName = firstName + lastName;
+//o tambien string fullName = firstName.append(lastName) cout << fullName;
+cout << fullName;
+int x7 = 10;
+int y7 = 20;
+int z2 = x7 + y7;
+string x8 = "10";
+string y8 = "20";
+string z3 = x8 + y8; 
+string txt2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+cout << "The length of the txt string is: " << txt2.length(); //O tambien size();
+string myString = "Hello";
+cout << myString[0];
+myString[0] = 'J';
+cout << myString;
+string txt = "We are the so-called \"Vikings\" from the north.";
+string txt = "It\'s alright.";
+string txt = "The character \\ is called backslash.";
+string fullName;
+cout << "Type your full name: ";
+getline (cin, fullName);
+cout << "Your name is: " << fullName;
+
+//Matematicas
+
+cout << max(5, 10);
+cout << min(5, 10);
+cout << sqrt(64);
+cout << round(2.6);
+cout << log(2);
+int x8 = 10;
+int y8 = 9;
+cout << (x8 > y8);
+int x9 = 10;
+
+//Expresiones booleanas
+
+cout << (x9 == 10);
+cout << (10 == 15); 
+int myAge = 25;
+int votingAge = 18;
+if (myAge >= votingAge) {
+  cout << "Old enough to vote!";
+} else {
+  cout << "Not old enough to vote.";
+}
+int x10 = 20;
+int y10 = 18;
+if (x10 > y10) {
+  cout << "x is greater than y";
+}
+int time4 = 20;
+if (time4 < 18) {
+  cout << "Good day.";
+} else {
+  cout << "Good evening.";
+}
+int time5 = 22;
+if (time5 < 10) {
+  cout << "Good morning.";
+} else if (time < 20) {
+  cout << "Good day.";
+} else {
+  cout << "Good evening.";
+}
+int time6 = 20;
+string result = (time6 < 18) ? "Good day." : "Good evening.";
+cout << result;
+
+//Switch
+
+int day = 4;
+switch (day) {
+  case 1:
+    cout << "Monday";
+    break;
+  case 2:
+    cout << "Tuesday";
+    break;
+  case 3:
+    cout << "Wednesday";
+    break;
+  case 4:
+    cout << "Thursday";
+    break;
+  case 5:
+    cout << "Friday";
+    break;
+  case 6:
+    cout << "Saturday";
+    break;
+  case 7:
+    cout << "Sunday";
+    break;
+}
+
+//While y for bucles
+
+int i = 0;
+while (i < 5) {
+  cout << i << "\n";
+  i++;
+}
+int i = 0;
+do {
+  cout << i << "\n";
+  i++;
+}
+while (i < 5);
+
+
+for (int i = 0; i < 5; i++) {
+  cout << i << "\n";
+}
+for (int i = 0; i <= 10; i = i + 2) {
+  cout << i << "\n";
+}
+for (int i = 1; i <= 2; ++i) {
+  cout << "Outer: " << i << "\n"; 
+
+
+  for (int j = 1; j <= 3; ++j) {
+    cout << " Inner: " << j << "\n"; 
+  }
+}
+
+//Break y continue
+
+for (int i = 0; i < 10; i++) {
+  if (i == 4) {
+    break;
+  }
+  cout << i << "\n";
+}
+
+int i = 0;
+while (i < 10) {
+  if (i == 4) {
+    i++;
+    continue;
+  }
+  cout << i << "\n";
+  i++;
+}
+
+//Matrices
+
+string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+cout << cars[0];
+cars[0] = "Opel";
+cout << cars[0];
+for (int i = 0; i < 5; i++) {
+  cout << cars[i] << "\n";
+}
+int myNumbers[5] = {10, 20, 30, 40, 50};
+for (int i = 0; i < 5; i++) {
+  cout << myNumbers[i] << "\n";
+}
+
+string cars1[5];
+cars1[0] = "Volvo";
+cars1[1] = "BMW";
+int myNumbers1[5] = {10, 20, 30, 40, 50};
+cout << sizeof(myNumbers1);
+int getArrayLength = sizeof(myNumbers1) / sizeof(int);
+cout << getArrayLength;
+for (int i = 0; i < 5; i++) {
+  cout << myNumbers[i] << "\n";
+}
+for (int i = 0; i < sizeof(myNumbers) / sizeof(int); i++) {
+  cout << myNumbers[i] << "\n";
+}
+string letters1[2][4] = {
+  { "A", "B", "C", "D" },
+  { "E", "F", "G", "H" }
+};
+string letters2[2][2][2] = {
+  {
+    { "A", "B" },
+    { "C", "D" }
+  },
+  {
+    { "E", "F" },
+    { "G", "H" }
+  }
+};
+
+for (int i = 0; i < 2; i++) {
+  for (int j = 0; j < 2; j++) {
+    for (int k = 0; k < 2; k++) {
+      cout << letters2[i][j][k] << "\n";
+    }
+  }
+}
+bool ships[4][4] = {
+  { 0, 1, 1, 0 },
+  { 0, 0, 0, 0 },
+  { 0, 0, 1, 0 },
+  { 0, 0, 1, 0 }
+};
+int hits = 0;
+int numberOfTurns = 0;
+while (hits < 4) {
+  int row, column;
+  cout << "Selecting coordinates\n";
+  cout << "Choose a row number between 0 and 3: ";
+  cin >> row;
+  cout << "Choose a column number between 0 and 3: ";
+  cin >> column;
+  if (ships[row][column]) {
+    ships[row][column] = 0;
+    hits++;
+    cout << "Hit! " << (4-hits) << " left.\n\n";
+  } else {
+    cout << "Miss\n\n";
+  }
+  numberOfTurns++;
+}
+cout << "Victory!\n";
+cout << "You won in " << numberOfTurns << " turns";
+
+//Estructuras
+
+struct {
+  int myNum;
+  string myString;
+} myStructure, myStruct1, myStruct2, myStruct3; 
+myStructure.myNum = 1;
+myStructure.myString = "Hello World!";
+cout << myStructure.myNum << "\n";
+cout << myStructure.myString << "\n";
+
+struct {
+  string brand;
+  string model;
+  int year;
+} myCar1, myCar2; // We can add variables by separating them with a comma here
+myCar1.brand = "BMW";
+myCar1.model = "X5";
+myCar1.year = 1999;
+myCar2.brand = "Ford";
+myCar2.model = "Mustang";
+myCar2.year = 1969;
+cout << myCar1.brand << " " << myCar1.model << " " << myCar1.year << "\n";
+cout << myCar2.brand << " " << myCar2.model << " " << myCar2.year << "\n";
+
+//Referencias
+
+string food = "Pizza";
+string &meal = food;
+cout << food << "\n";  
+cout << meal << "\n";
+cout << &food; 
+
+//Punteros
+
+string food = "Pizza";  
+string* ptr = &food;    
+cout << food << "\n";
+cout << &food << "\n";
+cout << ptr << "\n";
+
+string food = "Pizza";  
+string* ptr = &food;    
+cout << ptr << "\n";
+cout << *ptr << "\n";
+
+string food = "Pizza";
+string* ptr = &food;
+cout << food << "\n";
+cout << &food << "\n";
+cout << *ptr << "\n";
+*ptr = "Hamburger";
+cout << *ptr << "\n";
+cout << food << "\n";
+
+}
+
+//Funciones
+
+void myFunction(string fname,int age) {
+  cout << fname << " Refsnes "<< age <<"years old \n";
+}
+void myFunction2(string country = "Norway") {
+  cout << country << "\n";
+}
+int myFunction3(int x, int y) {
+  return x + y;
+}
+void swapNums(int &x, int &y) {
+  int z = x;
+  x = y;
+  y = z;
+}
+void myFunction4(int myNumbers4[5]) {
+  for (int i = 0; i < 5; i++) {
+    cout << myNumbers4[i] << "\n";
+  }
+}
+int plusFuncInt(int x, int y) {
+  return x + y;
+}
+
+double plusFuncDouble(double x, double y) {
+  return x + y;
+}
+int sum(int k) {
+  if (k > 0) {
+    return k + sum(k - 1);
+  } else {
+    return 0;
+  }
+}
+int main2(){
+  //Con for y while tambien se puede llamar la funcion
+  myFunction("Liam",3);
+  myFunction("Jenny",14);
+  myFunction("Anja",30);
+
+  myFunction2("Sweden");
+  myFunction2("India");
+  myFunction2();
+  myFunction2("USA");
+
+  int z = myFunction3(5, 3);
+  cout << z;
+
+  int firstNum = 10;
+  int secondNum = 20;
+  cout << "Before swap: " << "\n";
+  cout << firstNum << secondNum << "\n";
+  swapNums(firstNum, secondNum);
+  cout << "After swap: " << "\n";
+  cout << firstNum << secondNum << "\n";
+  int myNumbers5[5] = {10, 20, 30, 40, 50};
+  myFunction4(myNumbers5);
+
+  int myNum1 = plusFuncInt(8, 5);
+  double myNum2 = plusFuncDouble(4.3, 6.26);
+  cout << "Int: " << myNum1 << "\n";
+  cout << "Double: " << myNum2;
+
+  int result = sum(10);
+  cout << result;
+  return 0;
+}
+
+//Clases
+*/
+class MyClass {      
+  public:             
+    int myNum;        
+    string myString;  
+};
+class Car {
+  public:
+    string brand;   
+    string model;
+    int year;
+};
+class MyClass2 {       
+  public:              
+    void myMethod() {  
+      cout << "Hello World!";
+    }
+};
+class MyClass3 {        
+  public:              
+    void myMethod2();   
+};
+class Car2 {
+  public:
+    int speed(int maxSpeed);
+};
+
+int Car3::speed(int maxSpeed) {
+  return maxSpeed;
+}
+class Car4 {       
+  public:          
+    string brand;  
+    string model;  
+    int year;    
+    Car(string x, string y, int z) { 
+      brand = x;
+      model = y;
+      year = z;
+    }
+};
+class MyClass4 {
+  public:    
+    int x;   
+  private:   
+    int y;   
+};
+class Employee {
+  private:
+    int salary;
+  public:
+    void setSalary(int s) {
+      salary = s;
+    }
+    int getSalary() {
+      return salary;
+    }
+};
+class Vehicle {
+  public:
+    string brand = "Ford";
+    void honk() {
+      cout << "Tuut, tuut! \n" ;
+    }
+};
+class Car5: public Vehicle {
+  public:
+    string model = "Mustang";
+};
+class MyClass5 {
+  public:
+    void myFunction() {
+      cout << "Some content in parent class." ;
+    }
+};
+class MyChild: public MyClass {
+};
+class MyGrandChild: public MyChild {
+};
+class MyClass6 {
+  public:
+    void myFunction() {
+      cout << "Some content in parent class." ;
+    }
+};
+class MyOtherClass {
+  public:
+    void myOtherFunction() {
+      cout << "Some content in another class." ;
+    }
+};
+class MyChildClass2: public MyClass, public MyOtherClass {
+};
+class Animal {
+  public:
+    void animalSound() {
+      cout << "The animal makes a sound \n";
+    }
+};
+class Pig : public Animal {
+  public:
+    void animalSound() {
+      cout << "The pig says: wee wee \n";
+    }
+};
+class Dog : public Animal {
+  public:
+    void animalSound() {
+      cout << "The dog says: bow wow \n";
+    }
+};
+
+int main3() {
+  MyClass myObj; 
+  myObj.myNum = 15; 
+  myObj.myString = "Some text";
+  cout << myObj.myNum << "\n";
+  cout << myObj.myString;
+
+  Car carObj1;
+  carObj1.brand = "BMW";
+  carObj1.model = "X5";
+  carObj1.year = 1999;
+  Car carObj2;
+  carObj2.brand = "Ford";
+  carObj2.model = "Mustang";
+  carObj2.year = 1969;
+  cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << "\n";
+  cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << "\n";
+
+  MyClass myObj3;     
+  myObj3.myMethod();
+
+  Car3 myObj2; 
+  cout << myObj2.speed(200)  
+
+  Car4 carObj1("BMW", "X5", 1999);
+  Car4 carObj2("Ford", "Mustang", 1969);
+  cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << "\n";
+  cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << "\n";
+  
+  MyClass4 myObj4;
+  myObj4.x = 25;  
+  myObj4.y = 50;
+
+  Employee myObj5;
+  myObj5.setSalary(50000);
+  cout << myObj5.getSalary();
+
+  Car5 myCa5r;
+  myCa5r.honk();
+  cout << myCa5r.brand + " " + myCa5r.model;
+
+  MyGrandChild myObj6;
+  myObj6.myFunction();
+
+  MyChildClass myObj7;
+  myObj7.myFunction();
+  myObj7.myOtherFunction();
+
+  MyChildClass2 myObj8;
+  myObj8.myFunction();
+  myObj8.myOtherFunction();
+
+   Animal myAnimal;
+  Pig myPig;
+  Dog myDog;
+
+  myAnimal.animalSound();
+  myPig.animalSound();
+  myDog.animalSound();
+  return 0;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
